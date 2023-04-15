@@ -20,7 +20,7 @@ const Chatbot = () => {
     setChatHistory([...chatHistory, { sender: "you", message: message }]);
 
     axios
-      .post("http://localhost:5000/textbot", { message })
+      .post("https://blogmaster-server.onrender.com/textbot", { message })
       .then((res) => {
         const newMessage = {
           sender: "bot",
